@@ -6,10 +6,6 @@ import styles from './popularjobcard.style'
 import { checkImageURL } from '../../../../utils'
 
 const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
-  // console.log("item.job_title: ", item.job_title)
-  // console.log("item.job_country: ", item.job_country)
-  // console.log("item.employer_name: ", item.employer_name)
-  // console.log("selectedJob: ", selectedJob)
   
   return (
     <TouchableOpacity
