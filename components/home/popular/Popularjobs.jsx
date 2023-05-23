@@ -12,6 +12,7 @@ import useFetch from '../../../hook/useFetch'
 
 const Popularjobs = () => {
   const router = useRouter();
+  const [selectedJob, setSelectedJob] = useState()
 
   const { data, isLoading, error } = useFetch
   (
@@ -21,17 +22,18 @@ const Popularjobs = () => {
     }
   )
 
-  const handleCardPress = () => {
-    console.log("clicked")
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`)
+    setSelectedJob(item.job_id)
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular Jobs</Text>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Text style={styles.headerBtn}>Show all</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
 
       <View style={styles.cardsContainer}>
@@ -47,7 +49,7 @@ const Popularjobs = () => {
                 <PopularJobCard 
                   item={item}
                   selectedJob={item?.job_id}
-                  handleCardPress
+                  handleCardPress={handleCardPress}
                 />
               )}  
               keyExtractor={item => item?.job_id}

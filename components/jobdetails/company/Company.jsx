@@ -3,9 +3,11 @@ import { View, Text, Image } from 'react-native'
 
 import styles from './company.style'
 import { icons } from '../../../constants'
-import { checkImageURL, defaultImage } from '../../../utils'
+import { checkImageURL } from '../../../utils'
+import { defaultImage } from '../../../constants/images'
 
-const Company = ({ companyLogo, jobTitle, companyName, location}) => {
+const Company = ({ companyLogo, jobTitle, companyName, location}) => { 
+
   return (
     <View style={styles.container}>
       <View style={styles.logoBox}>
@@ -13,9 +15,9 @@ const Company = ({ companyLogo, jobTitle, companyName, location}) => {
           source={{
             uri: checkImageURL(companyLogo)
             ? companyLogo
-            : defaultImage
+            : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg"
           }}
-          styles={styles.logoImage}
+          style={styles.logoImage}
         />
       </View>
 
