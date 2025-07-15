@@ -23,5 +23,3 @@ Feel free to explore the source code and customize the application to meet your 
 
 Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request.
 
-Check it out [NeedAJob](https://expo.dev/%40omar212/jobs-app?serviceType=classic&distribution=expo-go&releaseChannel=default)
-
